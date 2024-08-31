@@ -1,0 +1,15 @@
+# Ignore datasets
+dataset_cifar10/
+dataset_pets/
+
+# Ignore generated models
+google_vit/
+google_vit_cifar10/
+google_vit_pets/
+intel_dpt_large/
+
+# Ignore the Idea project files
+.idea/
+
+# Ignore the VSCode project files
+.vscode/
