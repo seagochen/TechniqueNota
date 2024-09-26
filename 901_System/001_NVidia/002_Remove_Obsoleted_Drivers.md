@@ -1,3 +1,14 @@
+
+- [0. 问题表述](#0-问题表述)
+- [1. 切换到较低版本内核](#1-切换到较低版本内核)
+- [2. 清理旧的 NVIDIA 驱动](#2-清理旧的-nvidia-驱动)
+- [3. 手动修复 DKMS 问题](#3-手动修复-dkms-问题)
+- [4. 移除 `nouveau` 模块](#4-移除-nouveau-模块)
+- [5. 检查日志](#5-检查日志)
+
+
+### 0. 问题表述
+
 ```bash
 (base) vipuser@ubuntu22:~/Download$ sudo apt-get -y install cuda
 正在读取软件包列表... 完成
@@ -57,7 +68,6 @@ dpkg: 依赖关系问题使得 nvidia-driver-520 的配置工作不能继续：
  nvidia-driver-520 依赖于 nvidia-dkms-520 (= 520.61.05-0ubuntu1)；然而：
   软件包 nvidia-dkms-520 尚未配置。
 ```
-
 
 从错误日志中可以看到，主要问题出在 `nvidia-dkms-520` 模块的编译失败，这导致 CUDA 驱动程序以及相关组件未能正确安装。这个问题可能是由于以下原因引起的：
 

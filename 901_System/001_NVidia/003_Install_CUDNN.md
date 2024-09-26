@@ -1,3 +1,13 @@
+- [0. 准备工作](#0-准备工作)
+- [1. **删除非符号链接的文件**](#1-删除非符号链接的文件)
+- [2. **创建符号链接**](#2-创建符号链接)
+- [3. **重新运行 `ldconfig`**](#3-重新运行-ldconfig)
+
+
+### 0. 准备工作
+
+下载链接
+
 ```bash
 wget https://developer.download.nvidia.com/compute/cudnn/redist/cudnn/linux-x86_64/cudnn-linux-x86_64-9.4.0.58_cuda11-archive.tar.xz
 ```
